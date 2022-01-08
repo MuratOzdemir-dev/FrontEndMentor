@@ -1,0 +1,170 @@
+.main {
+  background-color: $white;
+  border-radius: 0.5rem;
+  margin: 1rem auto;
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 22rem;
+  @include breakpoint(tablet) {
+    max-width: 36rem;
+    margin: 1rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "title price"
+      "slider slider"
+      "check check"
+      "line line"
+      "footer footer";
+    justify-items: center;
+    align-items: center;
+  }
+  &__title {
+    color: $blueText;
+    font-size: 0.875rem;
+    @include breakpoint(tablet) {
+      grid-area: title;
+      justify-self: baseline;
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint(tablet) {
+      grid-area: price;
+      justify-self: end;
+    }
+    strong {
+      font-size: 1.75rem;
+      margin-right: 0.5rem;
+    }
+    span {
+      font-style: italic;
+      color: $blueText;
+    }
+  }
+  &__check {
+    margin: 1rem 0;
+    @include breakpoint(tablet) {
+      grid-area: check;
+    }
+
+    label {
+      align-items: center;
+      color: $blueText;
+      display: flex;
+      font-size: 0.75rem;
+      font-style: italic;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    &__discount {
+      background-color: lighten($lightRed, 25%);
+      border-radius: 1rem;
+      color: darken($lightRed, 25%);
+      padding: 0.2rem 0.5rem;
+    }
+    &__switch {
+      appearance: none;
+      height: 1.5rem;
+      width: 3rem;
+      background-color: #c2c2c2;
+      cursor: pointer;
+      border-radius: 1rem;
+      position: relative;
+      transition: background-color 0.3s ease;
+      outline: none;
+      &::before {
+        content: "";
+        height: 70%;
+        width: 35%;
+        background-color: white;
+        position: absolute;
+        border-radius: 50%;
+        border: #c2c2c2 solid 0.2rem;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+      }
+      &:checked {
+        background-color: lighten($strongCyan, 20%);
+        &::before {
+          border-color: lighten($strongCyan, 20%);
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
+  hr {
+    border: none;
+    border-bottom: 1px solid $grayishBlue;
+    margin: 2rem -1rem;
+    @include breakpoint(tablet) {
+      grid-area: line;
+      width: 113%;
+    }
+  }
+
+  &__slider {
+    @include breakpoint(tablet) {
+      grid-area: slider;
+      width: 100%;
+    }
+  }
+
+  .css-9vxwec {
+    &::before {
+      content: "";
+      background-image: url(../images/icon-slider.svg);
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 9px 12px;
+    }
+  }
+
+  &__footer {
+    @include breakpoint(tablet) {
+      grid-area: footer;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__text {
+      @include breakpoint(tablet) {
+        text-align: left;
+      }
+      p {
+        font-size: 0.8rem;
+        color: $blueText;
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+      .icon {
+        color: $strongCyan;
+        margin-right: 0.5rem;
+      }
+    }
+    &-btn {
+      background-color: $darkBlue;
+      border: none;
+      border-radius: 2rem;
+      box-shadow: 0px 3px 5px $blueText;
+      color: $grayishBlue;
+      cursor: pointer;
+      font-weight: 600;
+      padding: 0.5rem 2rem;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      margin-top: 2rem;
+      @include breakpoint(tablet) {
+        margin: 0;
+      }
+      &:hover {
+        color: $strongCyan;
+      }
+    }
+  }
+}

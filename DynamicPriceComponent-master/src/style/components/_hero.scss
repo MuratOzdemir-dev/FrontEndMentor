@@ -1,0 +1,32 @@
+.hero {
+  background-image: url(../images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  max-width: 25rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  @include breakpoint(tablet) {
+    max-width: 36rem;
+    padding: 4rem 1rem;
+  }
+  
+  &__title {
+    margin-bottom: 1rem;
+    color: $darkBlue;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  &__text {
+    color: $blueText;
+    h4 {
+      font-size: .875rem;
+      margin: .5rem;
+      @include breakpoint(tablet) {
+        display: inline;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}

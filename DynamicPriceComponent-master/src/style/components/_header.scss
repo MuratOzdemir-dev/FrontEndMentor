@@ -1,0 +1,9 @@
+.header {
+  height: 10vh;
+  background-color: #f1f5fe;
+  &__logo {
+    color: $darkBlue;
+    font-family: "Lobster", cursive;
+    text-shadow: $strongCyan 1px 1px 1px;
+  }
+}

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  background-color: $darkPaleBLue;
+  background-image: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
+
+.container {
+  padding: 1rem;
+  @include breakpoint(tablet) {
+    padding: 1rem 3rem;
+  }
+  @include breakpoint(laptop) {
+    padding: 1rem 6rem;
+  }
+  @include breakpoint(desktop) {
+    padding: 1rem 9rem;
+  }
+}
