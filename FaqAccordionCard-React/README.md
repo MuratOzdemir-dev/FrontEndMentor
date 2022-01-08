@@ -1,5 +1,6 @@
 # FAQ Accordion Card
 
+07/05/2021
 This is a responsive landing page for practice
 
 ## Pictures

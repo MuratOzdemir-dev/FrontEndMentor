@@ -1,6 +1,6 @@
 # Dynamic Price Component
 
-createdAt: 10/06/2021
+10/06/2021
 
 ![Project Image](https://res.cloudinary.com/dz209s6jk/image/upload/v1611325476/Challenges/aqcjg4hbvhk2bsrt7ay4.jpg)
 
