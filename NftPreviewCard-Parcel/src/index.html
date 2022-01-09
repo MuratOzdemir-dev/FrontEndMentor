@@ -2,12 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
     <link rel="stylesheet" href="./style/output.css" />
   </head>
   <body>
-    <p class="m-4">Test</p>
+    <div
+      id="root"
+      class="grid w-full min-h-screen place-items-center bg-mainBg"
+    >
+      <!-- Card Component -->
+      <main id="card" class="p-6 rounded-lg bg-cardBg w-80">
+        <!-- Image -->
+        <section id="image" class="relative">
+          <div
+            class="absolute grid w-full h-full transition-all rounded-lg opacity-0 cursor-pointer place-items-center bg-primaryCyan/50 hover:opacity-100"
+          >
+            <img src="./images/icon-view.svg" alt="view icon" />
+          </div>
+          <img
+            src="./images/image-equilibrium.jpg"
+            alt="cubic"
+            class="rounded-lg cursor-pointer w-72"
+          />
+        </section>
+
+        <!-- Text Content -->
+        <section
+          id="content"
+          class="flex flex-col gap-4 py-4 border-b border-line"
+        >
+          <h3 class="text-lg font-semibold">
+            <span
+              class="text-white transition-all cursor-pointer hover:text-primaryCyan"
+              >Equilibrium #3429</span
+            >
+          </h3>
+          <p class="my-2 font-light text-primaryBlue">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="flex items-center justify-between">
+            <div id="price" class="flex">
+              <img src="./images/icon-ethereum.svg" alt="icon-ethereum" />
+              <span class="ml-2 text-primaryCyan">0.041ETH</span>
+            </div>
+            <div id="time" class="flex items-center">
+              <img src="./images/icon-clock.svg" alt="clock" class="w-4 h-4" />
+              <span class="ml-1 text-sm font-thin text-primaryBlue"
+                >3 days left</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="flex items-center gap-4 pt-4">
+          <img
+            src="./images/image-avatar.png"
+            alt="image-avatar"
+            class="w-8 h-8 border border-white rounded-full"
+          />
+          <p class="text-sm text-primaryBlue">
+            Creation of
+            <span
+              class="font-semibold text-white transition-all cursor-pointer hover:text-primaryCyan"
+              >Jules Wyvern</span
+            >
+          </p>
+        </footer>
+      </main>
+    </div>
   </body>
 </html>
