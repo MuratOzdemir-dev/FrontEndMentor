@@ -1,0 +1,12 @@
+{
+  "name": "nft-preview",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "latest",
+    "tailwindcss": "^3.0.12"
+  }
+}
