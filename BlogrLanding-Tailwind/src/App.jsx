@@ -1,9 +1,11 @@
-function App() {
+import Hero from "./components/Hero";
+
+const App = () => {
   return (
-    <>
-      <h1 className="bg-sky-500">Hello World</h1>
-    </>
+    <main className="font-overpass">
+      <Hero />
+    </main>
   );
-}
+};
 
 export default App;
