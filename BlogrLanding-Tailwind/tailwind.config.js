@@ -24,6 +24,9 @@ module.exports = {
         overpass: ["Overpass"],
         ubuntu: ["Ubuntu"],
       },
+      backgroundImage: {
+        introMobile: "url('./images/bg-pattern-intro-mobile.svg')",
+      },
     },
   },
   plugins: [],
