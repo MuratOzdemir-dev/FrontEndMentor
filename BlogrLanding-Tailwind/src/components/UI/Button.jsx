@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const Button = ({ children, textColor, bg, border, hover }) => {
   return (
     <button
-      className={`w-32 rounded-3xl py-2 font-bold transition-all ${border} ${textColor} ${bg} ${hover}`}
+      className={`w-32 rounded-3xl py-2 font-bold transition-all  ${border} ${textColor} ${bg} ${hover}`}
     >
       {children}
     </button>
