@@ -2,12 +2,14 @@ import { useState } from "react";
 import logoSrc from "../style/images/logo.svg";
 import closeSrc from "../style/images/icon-close.svg";
 import hamburgerSrc from "../style/images/icon-hamburger.svg";
+import Button from "./UI/Button";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
   const [isCompanyMenuOpen, setIsCompanyMenuOpen] = useState(false);
   const [isConnectMenuOpen, setIsConnectMenuOpen] = useState(false);
+
   return (
     <header className="container relative z-20 mx-auto flex items-center justify-between p-4">
       <img src={logoSrc} alt="Logo" className="cursor-pointer" />
@@ -70,9 +72,19 @@ const Header = () => {
           </li>
         </ul>
         <hr />
-        <div>
-          <button>Login</button>
-          <button>Sign Up</button>
+        <div className="flex flex-col items-center gap-2 pt-4">
+          <Button
+            textColor="text-black"
+            hover="hover:bg-primary-veryLightRed hover:text-white"
+          >
+            Login
+          </Button>
+          <Button
+            textColor="text-black"
+            hover="hover:bg-primary-veryLightRed hover:text-white"
+          >
+            Sign Up
+          </Button>
         </div>
       </nav>
     </header>

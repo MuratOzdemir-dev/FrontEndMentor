@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Button from "./UI/Button";
 
 const Hero = () => {
   return (
@@ -15,12 +16,19 @@ const Hero = () => {
           </div>
           {/* Buttons */}
           <div className="flex justify-center gap-2  font-ubuntu">
-            <button className="w-32 rounded-3xl  bg-white py-2 text-primary-lightRed transition-all hover:bg-primary-veryLightRed hover:text-white">
+            <Button
+              textColor="text-primary-veryLightRed"
+              bg="bg-white"
+              hover="hover:text-white hover:bg-primary-veryLightRed"
+            >
               Start for Free
-            </button>
-            <button className="w-32 rounded-3xl border-2 border-white py-2 text-white transition-all hover:bg-white hover:text-primary-lightRed">
+            </Button>
+            <Button
+              border="border-2 border-white"
+              hover="hover:bg-white hover:text-white hover:text-primary-veryLightRed"
+            >
               Learn More
-            </button>
+            </Button>
           </div>
         </div>
       </div>
